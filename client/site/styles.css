@@ -1,0 +1,28 @@
+.demo-card-wide.mdl-card {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  background-color: #1E88E5;
+  color: #fff;
+  padding-top: 75px;
+}
+
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+#slider-table {
+  width: 90%;
+  margin: 10px auto;
+  padding: 0;
+  text-align: center;
+}
+
+.mdl-card__supporting-text {
+  width: 95%;
+}
+.align-right {
+  text-align: right;
+}
