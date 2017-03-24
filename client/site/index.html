@@ -57,21 +57,60 @@
     <div class="mdl-card__title">
         <h2 class="mdl-card__title-text">Please rate your coffee experience</h2>
     </div>
-
-    <div class="mdl-card__supporting-text">
-        <table id="slider-table">
-            <tr>
-                <td>Bad</td>
-                <td><input class="mdl-slider mdl-js-slider" id="s1" type="range" min="0" max="100" value="50" tabindex="0"></td>
-                <td>Good</td>
-            </tr>
-        </table>
+	
+	<div class="mdl-card__supporting-text">
+		<table id="options-table">
+			<tr>
+				<td>
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+					  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+					  <span class="mdl-radio__label">Volkskaffee</span>
+					</label>
+				</td>
+				<td>
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+					  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+					  <span class="mdl-radio__label">Nespresso</span>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+					  <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="3">
+					  <span class="mdl-radio__label">Tea</span>
+					</label>
+				</td>
+				<td>
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+					  <input type="radio" id="option-4" class="mdl-radio__button" name="options" value="4">
+					  <span class="mdl-radio__label">Senseo</span>
+					</label>
+				</td>
+			</tr>
+		</table>
     </div>
 
-    <div class="mdl-card__actions mdl-card--border align-right">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-            Send!
-        </button>
+    <div class="mdl-card__actions mdl-card--border">
+        <table id="slider-table">
+            <tr>
+                <td>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect full-size-button bad-button">
+				  	Bad
+					</button>
+				</td>
+                <td>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect full-size-button ok-button">
+				  	Ok
+					</button>
+				</td>
+				<td>
+					<button id="good-btn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect full-size-button good-button">
+				  	Good
+					</button>
+				</td>
+            </tr>
+        </table>
     </div>
 
     <div class="mdl-card__menu">
@@ -89,7 +128,7 @@
     </div>
 </div>
 
-<button id="demo-show-toast" class="mdl-button mdl-js-button mdl-button--raised" type="button">Show Toast</button>
+<!-- button id="demo-show-toast" class="mdl-button mdl-js-button mdl-button--raised" type="button">Show Toast</button-->
 <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
     <div class="mdl-snackbar__text"></div>
     <button class="mdl-snackbar__action" type="button"></button>
@@ -98,12 +137,13 @@
     (function() {
         'use strict';
         var snackbarContainer = document.querySelector('#demo-toast-example');
-        var showToastButton = document.querySelector('#demo-show-toast');
-        showToastButton.addEventListener('click', function() {
+        var showToastButton = document.querySelector('#good-btn');
+		var showSuccess =  function() {
             'use strict';
             var data = {message: 'Thank you. See you next time'};
             snackbarContainer.MaterialSnackbar.showSnackbar(data);
-        });
+        };
+        showToastButton.addEventListener('click', showSuccess);
     }());
 </script>
 </body>

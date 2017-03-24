@@ -19,10 +19,39 @@
   padding: 0;
   text-align: center;
 }
+#slider-table td {
+	padding: 5px;
+}
+
+#options-table {
+  margin: 10px auto;
+  padding: 0;
+}
+#options-table tr td {
+	padding: 10px 50px;
+}
 
 .mdl-card__supporting-text {
   width: 95%;
 }
 .align-right {
   text-align: right;
+}
+
+.full-size-button {
+	display: block;
+	width: 100%;
+	color: #fff;
+}
+
+.bad-button {
+	background-color: #D32F2F;
+}
+
+.ok-button {
+	background-color: #FFB300;
+}
+
+.good-button {
+	background-color: #43A047;
 }
